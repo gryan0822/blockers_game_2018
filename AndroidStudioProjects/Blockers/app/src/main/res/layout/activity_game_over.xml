@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/wooden_background"
+    tools:context="com.google.gryan0822.blockers.GameOverActivity">
+
+    <RelativeLayout
+        android:id="@+id/results_form"
+        android:layout_width="347dp"
+        android:layout_height="465dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#eedfcb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/round_results_txtView"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="Game Over Results"
+            android:textColor="@android:color/black"
+            android:textStyle="bold|italic" />
+
+        <TableLayout
+            android:id="@+id/player_results_table"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/round_results_txtView"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/white"
+            android:padding="1dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:id="@+id/tr_header"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/placed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+
+                    android:text="Place"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+
+                    android:text="Name"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/groups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+
+                    android:text="Groups"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/collected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+
+                    android:text="# Pieces"
+                    android:textStyle="bold|italic" />
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/player_standings_table"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/player_results_table"
+            android:layout_alignStart="@+id/player_results_table"
+            android:layout_below="@+id/standings_txtView"
+            android:background="@android:color/white"
+            android:padding="1dp"
+            android:stretchColumns="*">
+
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/next_game_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/player_standings_table"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/player_standings_table"
+            android:layout_marginBottom="23dp"
+            android:backgroundTint="#e5c59b"
+            android:text="Next Game" />
+
+        <TextView
+            android:id="@+id/standings_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/round_results_txtView"
+            android:layout_alignStart="@+id/round_results_txtView"
+            android:layout_below="@+id/player_results_table"
+            android:layout_marginTop="14dp"
+            android:text="Current Standings"
+            android:textColor="@android:color/black"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/next_game_button"
+            android:layout_alignEnd="@+id/player_standings_table"
+            android:layout_alignRight="@+id/player_standings_table"
+            android:backgroundTint="#e5c59b"
+            android:text="Save Game" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/player_results_table"
+            android:layout_alignLeft="@+id/player_results_table"
+            android:layout_alignStart="@+id/player_results_table"
+            app:srcCompat="@android:drawable/star_big_off" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/player_results_table"
+            android:layout_alignEnd="@+id/player_results_table"
+            android:layout_alignRight="@+id/player_results_table"
+            app:srcCompat="@android:drawable/star_big_off" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="match_parent"
+    android:background="@mipmap/wooden_background"
+    tools:context="com.google.gryan0822.blockers.AboutGameActivity">
+
+    <RelativeLayout
+        android:layout_width="336dp"
+        android:layout_height="441dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#eedfcb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/about_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:text="About Blockers"
+            android:textSize="24dp"
+            android:textStyle="italic|bold"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/how_to_play_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/about_textView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="How To Play:"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/creator_of_app_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/how_to_play_textView"
+            android:layout_alignStart="@+id/how_to_play_textView"
+            android:layout_below="@+id/description_textView"
+            android:layout_marginTop="17dp"
+            android:text="Creator of Application:"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/description_textView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/how_to_play_textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:text="The goal is to have the fewest number of groups of tiles on the board at the end of the game.\n\n   The players take turns placing one of their five tiles on a 9x9 grid and then draw another tile to replace it. There are three tiles which each player can place on each space: a letter, a number, or the item which represents the 3x3 sector of the board the space is in.\n\n  If another player has placed a tile it may be captured by playing a legal tile in its place, only if removing the tile doesn't break a group of tiles belonging to the player into more than one group. If players tie for the fewest number of groups at the end of the game, then the winner is the one who captured the fewest opponents' tiles. (BoardGameGeek.com)\n\n   The game concludes once each player has no more pieces to draw from the deck. Each player gets one more turn after that and then the game ends. Play your pieces wisely!"
+            android:textSize="9dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/creator_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/description_textView"
+            android:layout_alignStart="@+id/description_textView"
+            android:layout_below="@+id/creator_of_app_textView"
+            android:layout_marginTop="16dp"
+            android:text="Glenn Ryan, Senior Project 2018"
+            android:textColor="@android:color/black"/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/wooden_background"
+    tools:context="com.google.gryan0822.blockers.GatherPlayersActivity">
+
+    <RelativeLayout
+        android:id="@+id/form_restraint"
+        android:layout_width="340dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:background="@android:color/holo_red_light"
+        android:backgroundTint="#eedfcb"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058">
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:text="Submit"
+            android:backgroundTint="#e5c59b"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="374dp" />
+
+        <EditText
+            android:id="@+id/player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/player_form_textView"
+            android:layout_alignRight="@+id/player_form_textView"
+            android:layout_below="@+id/player_form_textView"
+            android:layout_marginTop="22dp"
+            android:ems="10"
+            android:hint="Player's Name"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="@android:color/darker_gray"
+            android:inputType="textPersonName"
+            android:maxLength="9"
+            android:textColorLink="@android:color/holo_blue_bright" />
+
+        <Spinner
+            android:id="@+id/color_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Color_textView"
+            android:layout_alignStart="@+id/Color_textView"
+            android:layout_below="@+id/Color_textView" />
+
+        <TextView
+            android:id="@+id/player_form_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:textColor="@android:color/black"
+            android:text="Player Entry Form"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/Color_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/type_spinner"
+            android:layout_alignStart="@+id/type_spinner"
+            android:layout_below="@+id/type_spinner"
+            android:layout_marginTop="11dp"
+            android:textColor="@android:color/black"
+            android:text="Color"
+            android:textStyle="italic" />
+
+        <Spinner
+            android:id="@+id/type_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/player_name"
+            android:layout_alignStart="@+id/player_name"
+            android:layout_below="@+id/player_name"
+            android:layout_marginTop="32dp" />
+
+        <TextView
+            android:id="@+id/type_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/type_spinner"
+            android:layout_alignStart="@+id/type_spinner"
+            android:layout_below="@+id/player_name"
+            android:layout_marginTop="13dp"
+            android:textColor="@android:color/black"
+            android:text="Player Type"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/player_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/player_name"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="P: 1"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/player_style_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/type_textView"
+            android:layout_alignBottom="@+id/type_textView"
+            android:layout_alignLeft="@+id/submit_button"
+            android:layout_alignStart="@+id/submit_button"
+            android:text="Player Style"
+            android:textColor="@android:color/black"
+            android:textStyle="italic" />
+
+        <Spinner
+            android:id="@+id/style_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/player_style_textView"
+            android:layout_alignStart="@+id/player_style_textView"
+            android:layout_below="@+id/player_style_textView" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

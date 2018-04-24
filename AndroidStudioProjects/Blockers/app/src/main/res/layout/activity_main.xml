@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/round_spinner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/wooden_background"
+
+    tools:context="com.google.gryan0822.blockers.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/blockers_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="84dp"
+        android:padding="1dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blockers_logo" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="299dp"
+        android:layout_height="246dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#eedfcb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
+            android:text="New Game"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="#e5c59b"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <Spinner
+            android:id="@+id/numOfPlayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignEnd="@+id/numPlayersTag"
+            android:layout_alignLeft="@+id/numPlayersTag"
+            android:layout_alignRight="@+id/numPlayersTag"
+            android:layout_alignStart="@+id/numPlayersTag"
+            android:layout_below="@+id/numPlayersTag"
+            app:layout_constraintBottom_toTopOf="@+id/start_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.807" />
+
+        <TextView
+            android:id="@+id/numPlayersTag"
+            android:layout_width="132dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Number of Players"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/numOfPlayers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/number_of_rounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/numOfPlayers"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Number of Rounds"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:textStyle="bold|italic" />
+
+        <Spinner
+            android:id="@+id/numOfRounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/numOfPlayers"
+            android:layout_alignLeft="@+id/numOfPlayers"
+            android:layout_alignRight="@+id/numOfPlayers"
+            android:layout_alignStart="@+id/numOfPlayers"
+            android:layout_below="@+id/number_of_rounds" />
+
+        <Button
+            android:id="@+id/load_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/start_button"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:backgroundTint="#e5c59b"
+            android:text="Load Game" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/about_button"
+        android:layout_width="79dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="About"
+        android:backgroundTint="#eedfcb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+</android.support.constraint.ConstraintLayout>
